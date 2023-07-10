@@ -9,6 +9,12 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+    <servlet>
+        <servlet-name>DBCPInit2</servlet-name>
+        <servlet-class>jdbc.OracleDBCPlnit</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
     <!--
     <servlet-mapping>
         <servlet-name>MariaDbDriverLoader</servlet-name>

@@ -18,17 +18,17 @@ public class OracleDBCPlnit extends HttpServlet{
     }
     public void loadJDBCDriver(){
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            System.out.println("MariaDb 드라이버 로딩 성공");
+            Class.forName("oracle.jdbc.OracleDriver");
+            System.out.println("Oracle 드라이버 로딩 성공");
         } catch (ClassNotFoundException e) {
-            System.out.println("MariaDb 드라이버 로딩 실패");
+            System.out.println("Oracle 드라이버 로딩 실패");
             throw new RuntimeException("fail to load JDBC Driver", e);
         }
     }
 
     private void initConnectionPool() {
         try {
-            String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE/chap14?" +
+            String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE/HR?" +
                     "useUnicode=true&characterEncoding=utf8";
             String dbUser = "hr";
             String dbpw = "1234";
